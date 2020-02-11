@@ -30,11 +30,9 @@ def check_factors(n, list_of_factors):
     """
     has_factors = False
     for i in list_of_factors:
-        new_list = list_of_factors.copy()
-        new_list.remove(i)
         a = (n / i)
         if a.is_integer():
-            if (a in new_list) & (n == (a * i)):
+            if (a in list_of_factors) & (n == (a * i)):
                 has_factors = True
                 return has_factors  # (a, i)
         else:
